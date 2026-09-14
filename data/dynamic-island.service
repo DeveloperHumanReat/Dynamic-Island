@@ -1,0 +1,13 @@
+[Unit]
+Description=Linux Dynamic Island Service
+After=graphical-session.target
+Wants=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/dynamic-island
+Restart=on-failure
+RestartSec=3s
+
+[Install]
+WantedBy=graphical-session.target
